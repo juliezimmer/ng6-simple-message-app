@@ -16,7 +16,10 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
                stagger('50ms',
                animate('550ms ease-out',
             style({ opacity: 1, transform: 'translateY(0px)'})))
-            ], { optional: true })
+            ], { optional: true }),
+            query(':leave', animate('50ms', style({ opacity: 0 })),
+               { optional: true 
+            })
          ])
       ])
    ]

@@ -1,6 +1,6 @@
 <h1>Users</h1>
 
-<ul>
+<ul [@listStagger]="users$">
    <li *ngFor="let user of users$">
       <!-- When the link is clicked, the user is directed to the details.component. WHen the user is routed to the details component, the targeted user is the one identified by the user.id.   id is one of the user object properties.  -->
       <a routerLink="/details/{{ user.id }}">{{ user.name }}</a>
